@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="bean.Classified" table="ClassifiedTable">
+      <id name="cid" column="classifiedID">
+          <generator class="assigned"/>
+      </id>
+      
+      <property name="title" column="classifiedtitle"></property>
+      <property name="desc" column="classifieddesc"></property>
+      <property name="catid" column="categoryID"></property>
+      <property name="userid" column="userid"></property>
+      <property name="img1" column="image1"></property>
+      <property name="img2" column="image2"></property>
+      <property name="img3" column="image3"></property>
+      <property name="img4" column="image4"></property>
+      <property name="postdate" column="postdate"></property>
+      <property name="paid" column="paid"></property>
+      <property name="uname" column="uname"/>
+      <property name="ucontact" column="ucontactno"/>
+      
+  </class>
+</hibernate-mapping>

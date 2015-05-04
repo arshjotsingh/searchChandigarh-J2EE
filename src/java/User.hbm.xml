@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="bean.User" table="UserTable">
+      <id name="uid" column="userID" type="integer">
+          <generator class="increment"></generator>
+      </id>
+          
+      <property name="uname" column="username" type="string"></property>
+      <property name="upass" column="password" type="string"></property>
+      <property name="fname" column="firstname" type="string"></property>
+      <property name="lname" column="lastname" type="string"></property>
+      <property name="gender" column="gender" type="string"></property>
+      <property name="DOB" column="DOB" type="string"></property>
+      <property name="email" column="emailaddress" type="string"></property>
+      <property name="street" column="street" type="string"></property>
+      <property name="city" column="city" type="string"></property>
+      <property name="country" column="country" type="string"></property>
+      <property name="zip" column="zipcode" type="string"></property>
+      <property name="photopath" column="photopath" type="string"></property>
+          
+      
+  </class>
+</hibernate-mapping>

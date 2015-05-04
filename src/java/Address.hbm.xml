@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="bean.Address" table="AddressTable">
+      <id name="addid" column="addressID" type="integer">
+          <generator class="increment"/>
+      </id>
+      <property name="recid" column="recordID" type="integer"/>
+      <property name="street" column="street" type="string"/>
+      <property name="area" column="area" type="string"/>
+      <property name="landmark" column="landmark" type="string"/>
+      <property name="city"  column="city" type="string"/>
+      <property name="state" column="state" type="string"/>
+      <property name="country" column="country" type="string"/>
+      <property name="zipcode" column="zipcode" type="string"/>
+      <property name="fone1" column="fone1"/>
+      <property name="fone2" column="fone2"/>
+      <property name="fone3" column="fone3"/>
+      <property name="imgpath" column="imagepath"/>
+       
+      
+     
+      <set name="email" table="EmailTable" cascade="all">
+          <key column="addressID"/>
+          <one-to-many class="bean.Email"/>
+      </set>
+      
+         
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="bean.Email" table="EmailTable">
+      <id name="emailid" column="emailID">
+          <generator class="increment"></generator>
+      </id>
+      <property name="emailadd" column="emailaddress"></property>
+      <many-to-one name="address" class="bean.Address" cascade="all">
+          <column name="addressID"></column>
+      </many-to-one>
+      
+  </class>
+</hibernate-mapping>

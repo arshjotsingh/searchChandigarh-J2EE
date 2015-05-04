@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="bean.Review" table="ReviewTable">
+      <id name="revid" column="reviewID">
+          <generator class="increment"/>
+      </id>
+      
+      <property name="revusr" column="userID"/>
+      <property name="revtext" column="reviewtext"/>
+      <property name="recid" column="recordID"/>
+      <property name="postdate" column="postdate"/>
+      <property name="visible" column="visible"/>
+      <property name="revusrname" column="username"/>
+       
+  </class>
+</hibernate-mapping>
